@@ -1,12 +1,9 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #262626;
+  background-color: #F6F6EF;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,46 +12,125 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.navbarcontato {
+  width: 120rem;
+  display: flex;
+  background-color: #FF5A11;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.625rem;
+  gap: 0.625rem;
 }
-a:hover {
-  color: #535bf2;
+h4 {
+  font-size: 12px;
+  font-weight: 400;
+  color: #F6F6EF;
+  margin-block-end: auto;
+  margin-block-start: auto;
+}
+
+.navbar {
+  width: 84rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: #262626;
+}
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+}
+.items {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  font-size: 24px;
+  font-weight: 700;
+}
+input {
+  text-align: left;
+  font-weight: 400;
+  height: 2.25rem;
+  width: 25.938rem;
+  border-radius: 10px;
+  border: none;
+  background: #F1F5F9;
+  padding: 0.5em;
+}
+.cart {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+/*  min-width: 320px;
+  min-height: 100vh;*/
+  gap: 2rem;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.125rem;
+}
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 4rem;
+  line-height: 4.56rem;
+  font-weight: 700;
+  width: 40.25rem;
+  margin-block-end: auto;
+  margin-block-start: auto;
+}
+p {
+  font-size: 1.5rem;
+  line-height: 1.688rem;
+  font-weight: 700;
+  width: 43.563rem;
+  margin-block-end: auto;
+  margin-block-start: auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.destaques {
+  width: 84.25rem;
+  display: flex;
+  background-color: #F5CB7A;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.9rem 0.68rem;
+  gap: 21rem;
+  border-radius: 10px;
 }
-button:hover {
-  border-color: #646cff;
+h3 {
+  font-size: 2.25rem;
+  line-height: 2.813rem;
+  font-weight: 700;
+  margin-block-end: auto;
+  margin-block-start: auto;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+
+.promocoes {
+  width: fill;
+  display: flex;
+  flex-direction: column;
 }
+h2 {
+  font-size: 3rem;
+  line-height: 3.438rem;
+  font-weight: 700;
+  margin-block-end: auto;
+  margin-block-start: auto;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
