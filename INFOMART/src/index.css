@@ -12,15 +12,29 @@
   -webkit-text-size-adjust: 100%;
 }
 
-.navbarcontato {
-  width: 120rem;
-  display: flex;
-  background-color: #FF5A11;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0.625rem;
-  gap: 0.625rem;
+* {
+    margin: 0px;
+    padding: 0px;
 }
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.navBarContato {
+    max-width: 125rem;
+    display: flex;
+    background-color: #FF5A11;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.45rem;
+
+}
+
 h4 {
   font-size: 12px;
   font-weight: 400;
@@ -29,20 +43,45 @@ h4 {
   margin-block-start: auto;
 }
 
-.navbar {
-  width: 84rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.navBar {
+    width: 84rem;
+    padding: 0.7rem 0;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.navBar .logo {
+    font-size: 2.25rem;
+    font-family: 'Domine', serif;;
+}
+
+.navBar .items, .nav .cart {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 1348px;
+    gap: 2.2rem;
+}
+
+
 a {
   text-decoration: none;
   color: #262626;
 }
 .logo {
-  font-size: 36px;
-  font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 36px;
+    font-weight: 700;
 }
 .items {
   flex-direction: row;
@@ -62,12 +101,16 @@ input {
   padding: 0.5em;
 }
 .cart {
-  font-size: 24px;
-  font-weight: 700;
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;   
+    font-size: 24px;
+    font-weight: 700;
 }
 
-body {
-  margin: 0;
+main {
+  margin: 0 auto;
+  width: 84rem;
   display: flex;
   place-items: center;
   flex-direction: column;
@@ -78,10 +121,8 @@ body {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.125rem;
+    display: flex;
+    justify-content: space-between;
 }
 h1 {
   font-size: 4rem;
@@ -104,8 +145,7 @@ p {
   width: 84.25rem;
   display: flex;
   background-color: #F5CB7A;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.9rem 0.68rem;
   gap: 21rem;
   border-radius: 10px;
@@ -118,11 +158,12 @@ h3 {
   margin-block-start: auto;
 }
 
-.promocoes {
+.promotions {
   width: fill;
   display: flex;
   flex-direction: column;
 }
+
 h2 {
   font-size: 3rem;
   line-height: 3.438rem;
