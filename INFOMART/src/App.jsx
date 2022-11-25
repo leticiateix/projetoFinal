@@ -55,8 +55,16 @@ function App() {
                     <div>
                         <h3>Algumas sugestões</h3>
                     </div>
-                    <div>
-                        <h3>Ou adicione um item</h3>
+                    <div className='frame'>
+                        <h3>Ou adicione um item personalizado</h3>
+                        <div className='addItem-container'>
+                            <div>
+                                <img src="./add.svg" alt="" />
+                            </div>
+                            <div>
+                                <p>Crie seu item</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -65,7 +73,34 @@ function App() {
                     </div>
                 </div>
             </div> 
-        </main>        
+            
+        </main>  
+        <footer>InfoMart © Todos os direitos reservados.</footer>     
+        <section className='modal-container'>
+            <div className='modal'>
+                <button className='fechar'>X</button>
+                <div className='addItem'>
+                    <div>
+                        <img src="./add.svg" alt="" />
+                    </div>
+                    <div>
+                        <p>Adicionar uma imagem</p>
+                    </div>
+                </div>
+                <div >
+                    <form className='forms' action="">
+                        <label htmlFor="name">Nome</label>
+                        <input type="text" htmlFor="name" id='name' />
+                        <label htmlFor="preco">Preço</label>
+                        <input type="text" htmlFor="preco" id='preco' />
+                        <label htmlFor="categoria">Gategoria</label>
+                        <input type="text" htmlFor="gategoria" id='gategoria' />
+                    </form>
+                    <a href="">+ Adicionar item</a>
+                </div>
+                
+            </div>
+        </section> 
         {/* </div> */}
     </body>
     )
