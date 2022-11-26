@@ -192,6 +192,26 @@ h3 {
   margin-block-start: auto;
 }
 
+.carousel {
+  width: 40.625;
+  height: 21.688;
+  overflow-x: scroll;
+  padding: 0;
+  gap: 0.9rem;
+}
+
+.img-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 0.938rem;
+}
+
+.img-caurosel img {
+  width: 15,313rem;
+  height: 13rem;
+  border-radius: 0.625rem;
+}
+
 .promotions {
   width: fill;
   display: flex;

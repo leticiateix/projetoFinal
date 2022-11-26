@@ -52,8 +52,16 @@ function App() {
                     </div>
                 </div>
                 <div  className="destaques">
-                    <div>
+                    <div className='carousel'>
                         <h3>Algumas sugestões</h3>
+                        <div className="img-carousel">
+                            <img src="./caqui.svg" alt="" />
+                            <img src="./caqui.svg" alt="" />
+                            <img src="./caqui.svg" alt="" />
+                            <img src="./caqui.svg" alt="" />
+                            <img src="./caqui.svg" alt="" />
+                            <img src="./caqui.svg" alt="" />
+                        </div>
                     </div>
                     <div className='frame'>
                         <h3>Ou adicione um item personalizado</h3>
