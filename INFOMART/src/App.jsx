@@ -150,6 +150,36 @@ function App() {
                 <div>
                     <div className="promotions">
                         <h2>Categorias</h2>
+                        <div className="categorias">
+                            <div className="one">
+                                <img src="./padaria.svg" alt="" />
+                                <h3 id='name'>Padaria</h3>
+                                <div class="botao">
+                                    <h4>Confira</h4>
+                                </div>
+                            </div>
+                            <div className="one">
+                                <img src="./hortifruti.svg" alt="" />
+                                <h3 id='name'>Hortifruti</h3>
+                                <div class="botao">
+                                    <h4>Confira</h4>
+                                </div>
+                            </div>
+                            <div className="one">
+                                <img src="./limpeza.svg" alt="" />
+                                <h3 id='name'>Limpeza</h3>
+                                <div class="botao">
+                                    <h4>Confira</h4>
+                                </div>
+                            </div>
+                            <div className="one">
+                                <img src="./higiene.svg" alt="" />
+                                <h3 id='name'>Higiene</h3>
+                                <div class="botao">
+                                    <h4>Confira</h4>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div> 

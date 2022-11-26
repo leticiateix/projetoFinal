@@ -286,6 +286,48 @@ h2 {
   margin-block-start: auto;
 }
 
+.categorias {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.625rem;
+  background-color: #DEDEDE;
+  border-radius: 5px;
+  height: 41.313rem;
+}
+.one img {
+  border-radius: 5px 5px 0px 0px;
+}
+h3#name {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px; 
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+.botao {
+  background-color: #FF5A11;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 11.438rem;
+  height: 2.75rem;
+}
+.botao h4 {
+  font-family: 'Mulish';
+  font-weight: 400;
+  font-size: 16px;
+}
+
 footer {
     text-align: center;
     padding: 2rem 0;
