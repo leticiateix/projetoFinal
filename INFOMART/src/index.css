@@ -212,6 +212,66 @@ h3 {
   border-radius: 0.625rem;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;    
+}
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 15rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+h4#nome {
+  font-family: 'Domine';
+  font-weight: 700;
+  size: 16px;
+  color: #262626;
+}
+
+h4#preco {
+  font-family: 'Mulish';
+  font-weight: 700;
+  size: 16px;
+  color: #FF5A11;
+}
+
+h5{
+  font-family: 'Mulish';
+  font-weight: 700;
+  size: 12px;
+  color:#9E9E9E;
+}
+
+.add {
+  background-color: #FF5A11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15.313rem;
+  height: 2.438rem;
+  border-radius: 10px;
+}
+h6{
+  font-family: 'Mulish';
+  font-weight: 400;
+  size: 12px;
+  color: #F6F6EF;
+
+}
+
 .promotions {
   width: fill;
   display: flex;

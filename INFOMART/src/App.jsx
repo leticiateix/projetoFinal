@@ -55,12 +55,84 @@ function App() {
                     <div className='carousel'>
                         <h3>Algumas sugestões</h3>
                         <div className="img-carousel">
-                            <img src="./caqui.svg" alt="" />
-                            <img src="./caqui.svg" alt="" />
-                            <img src="./caqui.svg" alt="" />
-                            <img src="./caqui.svg" alt="" />
-                            <img src="./caqui.svg" alt="" />
-                            <img src="./caqui.svg" alt="" />
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
+                            <div class="content" id="content">
+                                <img src="./caqui.svg" alt="" />
+                                <div class="categoria">
+                                    <div class="info">
+                                        <h4 id="nome">Caqui</h4>
+                                        <h4 id="preco">R$ 49,99</h4>
+                                    </div>
+                                    <h5>Categoria: Fruta</h5>
+                                </div>
+                                <div class="add">
+                                    <h6>+ Lista</h6>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='frame'>
