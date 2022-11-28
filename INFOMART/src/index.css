@@ -20,20 +20,40 @@
 
 .nav {
     display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 81.125rem;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    
 }
 
-.navBarContato {
-    max-width: 125rem;
+.navBar {
+    width: 81.125rem;
+    padding: 0.7rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffecc6;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    width: 81.125rem;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+/* .navBarContato {
+    width: 100%;
     display: flex;
     background-color: #FF5A11;
     justify-content: space-between;
     align-items: center;
-    padding: 0.45rem;
-
-}
+    padding: 0.45rem 0;
+    margin: 0 auto;
+} */
 
 h4 {
   font-size: 12px;
@@ -43,14 +63,7 @@ h4 {
   margin-block-start: auto;
 }
 
-.navBar {
-    width: 84rem;
-    padding: 0.7rem 0;
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .navBar .logo {
     font-size: 2.25rem;
@@ -63,13 +76,7 @@ h4 {
     font-family: 'Mulish', sans-serif;
 }
 
-.container {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    width: 1348px;
-    gap: 2.2rem;
-}
+
 
 
 a {
@@ -110,7 +117,6 @@ input {
 
 main {
   margin: 0 auto;
-  width: 84rem;
   display: flex;
   place-items: center;
   flex-direction: column;
@@ -141,21 +147,15 @@ p {
 }
 
 .destaques {
-  width: 84.25rem;
   display: grid;
   background-color: #F5CB7A;
   grid-template-columns: 1fr 1fr;
-  padding: 0.9rem 0.68rem;
+  padding: 0.9rem 1rem;
   gap: 4rem;
   border-radius: 10px;
 }
 
-.frame {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+
 
 .addItem-container, .addItem {
     display: flex;
@@ -185,7 +185,7 @@ p {
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 2.1rem;
   line-height: 2.813rem;
   font-weight: 700;
   margin-block-end: auto;
@@ -193,11 +193,20 @@ h3 {
 }
 
 .carousel {
-  width: 40.625;
-  height: 21.688;
-  overflow-x: scroll;
-  padding: 0;
-  gap: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    width: 40.625;
+    height: 21.688;
+    overflow-x: scroll;
+    padding: 0;
+    gap: 0.9rem;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:4.5rem;
 }
 
 .img-carousel {
@@ -224,7 +233,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   gap: 8px;
-  width: 15rem;
+  width: 13.75rem;
 }
 
 .info {
@@ -273,7 +282,6 @@ h6{
 }
 
 .promotions {
-  width: fill;
   display: flex;
   flex-direction: column;
 }
@@ -289,7 +297,7 @@ h2 {
 .categorias {
   display: flex;
   flex-direction: row;
-  gap: 1.25rem;
+  gap: 0.2rem;
 }
 
 .one {
@@ -358,3 +366,139 @@ footer {
     background-color: #f9f9f9;
   }
 }
+
+.ativo {
+    display: block;
+}
+
+.noActive {
+    display: none;
+}
+
+
+/* Responsividade */
+
+@media (max-width:600px) {
+    .container {
+        display: flex;
+        margin: 0 auto;
+        width: 20.35rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2.2rem;
+    }
+    .nav {
+        display: flex;
+        margin: 0 auto;
+        width: 20.35rem;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+    .navBar {
+        display: flex;
+        gap: 0.7rem;
+        background-color: #ffecc6;
+        width: 20.35rem;
+        padding: 0.7rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* h4 {
+        font-size: 12px;
+        font-weight: 400;
+        color: #F6F6EF;
+        margin-block-end: auto;
+        margin-block-start: auto;
+    } */
+    .logo a {
+        font-size: 0.9375rem;
+    }
+    .ativo {
+        display: none;
+    }
+    .noActive {
+        display: block;
+    }
+    .cart a {
+        font-size: 0.75rem;
+    }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 2rem;
+        width: 19rem;
+        text-align: center;
+        padding: 10px;
+    }
+    .hero p {
+        font-size: 0.75rem;
+        text-align: center;
+        line-height: 0.85rem;
+        padding: 10px;
+    }
+    .addItem-container, .addItem {
+        width: 293px;
+        height: 354px;
+        background: none;
+        padding: 0px;
+    }
+
+    .destaques {
+        display: grid;
+        background-color: #F5CB7A;
+        grid-template-columns: 293px;
+        padding: 2rem 1rem;
+        gap: 4rem;
+        border-radius: 10px;
+        
+    }
+    .frame {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        gap:2rem;
+    }
+
+    .frame h3, .carousel h3  {
+        width: 293px;
+        text-align: center;
+        font-weight: 700;
+        line-height: 1.76rem;
+        font-size: 1.5rem;
+    }
+    .categorias {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+    }
+    .one {
+        gap: 1rem;
+        width: 9.5rem;
+        height: 20.5rem;
+    }
+    .botao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 7.75rem;
+        height: 1.625rem;
+    }
+    .promotions h2 {
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: center;
+    }
+    h3#name {
+        font-family: 'Mulish';
+        font-size: 1.5rem; 
+    }
+}
+
