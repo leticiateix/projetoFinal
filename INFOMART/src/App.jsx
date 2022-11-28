@@ -189,10 +189,10 @@ function App() {
                 <footer>InfoMart © Todos os direitos reservados.</footer>     
                 <section className='modal-container'>
                     <div className='modal'>
-                        <button className='fechar'>X</button>
+                        <a className='fechar'>X</a>
                         <div className='addItem'>
                             <div>
-                                <img src="./add.svg" alt="" />
+                                <img src="./Add (1).svg" alt="" />
                             </div>
                             <div>
                                 <p>Adicionar uma imagem</p>

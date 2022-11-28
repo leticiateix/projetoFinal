@@ -346,6 +346,20 @@ footer {
     margin: 0 auto;
     width: 436px;
     height: 438px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.modal-container .addItem {
+    background-color: #DEDEDE;
+    width: 370px;
+}
+
+.fechar {
+    color: #FF5A11;
+    font-weight: 700;
+    font-size: 2rem;
+    right: 350px;
 }
 
 .forms {
