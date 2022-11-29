@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-
+import Routes from './routes'
+import { Link } from 'react-router-dom'
 
 
 
@@ -239,11 +240,7 @@ function App() {
                         
                     </div>
                 </section> 
-
-            </div> 
-
-            
-            
+            </div>
         </main>  
         
         {/* </div> */}
