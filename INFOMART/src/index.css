@@ -21,22 +21,42 @@
 .nav {
     display: flex;
     margin: 0 auto;
-    width: 81.125rem;
     justify-content: center;
     margin-bottom: 1.5rem;
+    width: 100%;
+    background-color: #ffecc6;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     
 }
 
 .navBar {
-    width: 81.125rem;
     padding: 0.7rem 1rem;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffecc6;
+}
+
+.navBar input {
+    width: 415px;
 }
 
 .container {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.2rem;
+    min-width: 81.125rem;
+    margin-top: 90px;
+}
+
+.container-conteudo {
     display: flex;
     margin: 0 auto;
     width: 81.125rem;
@@ -67,12 +87,12 @@ h4 {
 
 .navBar .logo {
     font-size: 2.25rem;
-    font-family: 'Domine', serif;;
+    font-family: 'Domine', serif;
 }
 
 .navBar .items, .nav .cart {
     display: flex;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'Mulish', sans-serif;
 }
 
@@ -144,7 +164,6 @@ p {
   font-weight: 700;
   margin-block-end: auto;
   margin-block-start: auto;
-  width: 43.563rem;
 }
 
 .destaques {
@@ -298,7 +317,7 @@ h2 {
 .categorias {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .one {
@@ -341,19 +360,138 @@ footer {
     text-align: center;
     padding: 2rem 0;
     background-color: #ffecc6;
+    width: 100%;
+    bottom: 0;
 }
 
 .modal-container {
-    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    background: rgba(255, 90, 17, 0.38);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    padding: 0px;
+    background-color: #DEDEDE;
+    border-radius: 10px;
+    position: relative;
     width: 436px;
-    height: 438px;
 }
 
 .forms {
+    background: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 16px 28px;
+}
+
+.fechar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #FF5A11;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+
+.addItemModal {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+    cursor: pointer;
+    color: #FF5A11;
+    font-size: 1.5rem;
+    font-family: 'Domine', serif;
+    font-weight: 700;
 }
+
+.forms label{
+    font-weight: 400;
+    font-family: 'Mulish';
+    display: block;
+    width: 100px;
+    
+} 
+
+.forms input {
+    width: 150px;
+    height: 35px;
+    padding: 0px;
+    border: none;
+    padding-left: 5px;
+    font-size: 0.75rem;
+    color: #9E9E9E;
+    font-family: 'Mulish';
+}
+
+.input-modal {
+    display: flex;
+    flex-direction: column;
+    color:#262626;
+    font-family: 'Mulish';
+    font-size: 0.75rem;
+}
+
+.button-modal {
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: flex-end;
+}
+
+.button-modal button {
+    width: 150px;
+    height: 39px;
+    border-radius: 10px;
+    border: none;
+    background: #FF5A11;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 24px;
+}
+
+.modal-container.active {
+    display: flex;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.active .modal {
+    animation: modal .3s forwards;
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -382,11 +520,21 @@ footer {
 @media (max-width:600px) {
     .container {
         display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2.2rem;
+        min-width: 20.35rem;
+    }
+
+    .container-conteudo {
+        margin-top: 80px;
+        display: flex;
         margin: 0 auto;
         width: 20.35rem;
         justify-content: center;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2.2rem;
     }
     .nav {
         display: flex;
@@ -437,9 +585,6 @@ footer {
         text-align: center;
         padding: 10px;
     }
-    p {
-      width: 19.125rem;
-    }
     .hero p {
         font-size: 0.75rem;
         text-align: center;
@@ -480,7 +625,6 @@ footer {
     .categorias {
         display: grid;
         grid-template-columns:  1fr 1fr;
-        gap: 1.375rem;
     }
     .one {
         gap: 1rem;
@@ -505,5 +649,76 @@ footer {
         font-family: 'Mulish';
         font-size: 1.5rem; 
     }
+    footer {
+        display: flex;
+        margin: 0 auto;
+        width: 20.35rem;
+        justify-content: center;
+        
+    }
+
+
+
+    /* Modal */
+        .modal-container {
+        height: 100vh;
+        min-width: 20.35rem;
+    }
+
+    .modal {
+        width: 327px;
+    }
+
+
+    .addItemModal p {
+        font-size: 0.9rem;
+        font-family: 'Domine', serif
+    }
+
+
+    .forms input {
+        width: 108px;
+        height: 35px;
+        padding: 0px;
+        border: none;
+        padding-left: 5px;
+        font-size: 0.5rem;
+        color: #9E9E9E;
+        font-family: 'Mulish';
+    }
+
+    .input-modal {
+        display: flex;
+        flex-direction: column;
+        color:#262626;
+        font-family: 'Mulish';
+        font-size: 0.75rem;
+    }
+
+    .button-modal {
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+        align-items: flex-end;
+    }
+
+    .button-modal button {
+        width: 108px;
+        height: 39px;
+        border-radius: 10px;
+        border: none;
+        background: #FF5A11;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 0.7rem;
+    }
+
+    .forms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 24px;
+    }
+
 }
 
