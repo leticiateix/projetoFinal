@@ -1,15 +1,17 @@
 const express = require('express');
 const nodemon = require('nodemon')
 const { Pool } = require('pg');
+
+const app = express();
+app.use(express.json());
+
+///
+
 require('dotenv').config()
 
 const pool = new Pool({
     connectionString: process.env.POSTGRES_URL
 });
-
-const app = express();
-
-app.use(express.json());
 
 app.get('/lista_compras', async (req, res) => {
     try {
@@ -29,6 +31,8 @@ app.post('/session', async (req, res) => {
         return res.status(400).send(err)
     }
 })
+
+///
 
 const PORT = process.env.PORT || 5432;
 app.listen(PORT, function() {

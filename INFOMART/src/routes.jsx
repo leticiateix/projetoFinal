@@ -1,16 +1,18 @@
-//import React from "react";
-//import { Route, BrowserRouter } from "react-router-dom";
+import React from "react";
+import { Route, Routes, BrowserRouter as Router} from "react-router-dom";
 
-//import Home from "./Home";
-//import Minhalista from "./Minhalista";
+import Home from './pages/home';
+import Minhalista from "./pages/minhalista";
 
-//const Routes = () => {
-//   return(
-//       <BrowserRouter>
-//           <Route component = { Home }  path="/" exact />
-//           <Route component = { Minhalista }  path="/minhalista" />
-//       </BrowserRouter>
-//   )
-//}
+export function AppRoutes() {
+   return(
+       <Router>
+            <Routes>
+                <Route component = { Home }  path="/" exact />
+                <Route component = { Minhalista }  path="/minhalista" />
+            </Routes>
+       </Router>
+   )
+}
 
-//export default Routes;
+export default Routes;
