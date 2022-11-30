@@ -1,10 +1,15 @@
+import React from 'react';
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 //import Routes from './routes'
 //import { Link } from 'react-router-dom'
 //import api from './Servidor/...'
-
+//import { BrowserRouter as Router } from 'react-router-dom';
+//import Home from './pages/home';
+//import Minhalista from './pages/minhalista';
+//import api from './Servidor/...'
 
 function App() {
     
