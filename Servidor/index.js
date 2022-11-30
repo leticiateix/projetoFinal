@@ -1,10 +1,17 @@
 const express = require('express');
 const nodemon = require('nodemon')
+const { Pool } = require('pg');
+require('dotenv').config()
+
+const pool = new Pool({
+    connectionString: process.env.POSTGRES_URL
+});
+
 const app = express();
 
 app.use(express.json());
 
-const ControllersUsers = require('./controllers/ControllerUsers');
+//const ControllersObj = require('./controllers/ControllerObj');
 
 //Usuarios
 //app.post('/tarefa/insert', ControllersTarefas.insert);

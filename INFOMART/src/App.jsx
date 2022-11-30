@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import Routes from './routes'
-import { Link } from 'react-router-dom'
-
+//import Routes from './routes'
+//import { Link } from 'react-router-dom'
+//import api from './Servidor/...'
 
 
 function App() {
@@ -78,9 +78,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                                 <div className="content" id="content">
                                     <img src="./caqui.svg" alt="" />
@@ -91,9 +89,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                                 <div className="content" id="content">
                                     <img src="./caqui.svg" alt="" />
@@ -104,9 +100,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                                 <div className="content" id="content">
                                     <img src="./caqui.svg" alt="" />
@@ -117,9 +111,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                                 <div className="content" id="content">
                                     <img src="./caqui.svg" alt="" />
@@ -130,9 +122,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                                 <div className="content" id="content">
                                     <img src="./caqui.svg" alt="" />
@@ -143,9 +133,7 @@ function App() {
                                         </div>
                                         <h5>Categoria: Fruta</h5>
                                     </div>
-                                    <div className="add">
-                                        <h6>+ Lista</h6>
-                                    </div>
+                                    <button id='botao1'>+ Lista</button>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +159,7 @@ function App() {
                                     <img className="noActive" src="./donuts.svg" alt="" />
                                     <h3 id='name'>Padaria</h3>
                                     <div className="botao">
-                                        <h4>Confira</h4>
+                                        <button id='botao2'>Confira</button>
                                     </div>
                                 </div>
                                 <div className="one">
@@ -179,7 +167,7 @@ function App() {
                                     <img className="noActive" src="./legumes.svg" alt="" />
                                     <h3 id='name'>Hortifruti</h3>
                                     <div className="botao">
-                                        <h4>Confira</h4>
+                                        <button id='botao2'>Confira</button>
                                     </div>
                                 </div>
                                 <div className="one">
@@ -187,7 +175,7 @@ function App() {
                                     <img className="noActive" src="./limpeza-1.svg" alt="" />
                                     <h3 id='name'>Limpeza</h3>
                                     <div className="botao">
-                                        <h4>Confira</h4>
+                                        <button id='botao2'>Confira</button>
                                     </div>
                                 </div>
                                 <div className="one">
@@ -195,7 +183,7 @@ function App() {
                                     <img className="noActive" src="./papel.svg" alt="" />
                                     <h3 id='name'>Higiene</h3>
                                     <div className="botao">
-                                        <h4>Confira</h4>
+                                        <button id='botao2'>Confira</button>
                                     </div>
                                 </div>
                             </div>
