@@ -8,11 +8,18 @@ import {
 } from 'react-router-dom';
 import './index.css'
 import Home from "./pages/home";
+import ErrorPage from './error-page';
+import Minhalista from "./pages/minhalista";
 
 const router = createBrowserRouter ([
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/minhalista",
+    element: <Minhalista />,
   }
 ])
 
