@@ -1,15 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import {
   createBrowserRouter,
   RouterProvider,
   Route
 } from 'react-router-dom';
-import './index.css'
-import Home from "./pages/home";
+//import './index.css'
+import Home from "./pages/home/home";
 import ErrorPage from './error-page';
-import Minhalista from "./pages/minhalista";
+import Minhalista from "./pages/minhalista/minhalista";
 
 const router = createBrowserRouter ([
   {
@@ -18,7 +17,7 @@ const router = createBrowserRouter ([
     errorElement: <ErrorPage />
   },
   {
-    path: "/minhalista",
+    path: "minhalista",
     element: <Minhalista />,
   }
 ])

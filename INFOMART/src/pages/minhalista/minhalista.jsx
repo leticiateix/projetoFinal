@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../styles/minhalista.css';
+import "./minhalista.css";
 
 
 export default function Minhalista() {
@@ -12,7 +12,7 @@ export default function Minhalista() {
 
                 {/* Início da Introdução */}
         <main>
-            <div className='container'>
+            <div className='container2'>
                 <div className='nav'>
                             {/* <div className="navBarContato">
                                 <h4>(XX) YYYYY - ZZZZ</h4>
@@ -37,7 +37,7 @@ export default function Minhalista() {
                         </div>
                     </div>
                 </div>
-                <div className='container-conteudo'>
+                <div className='container-cont'>
                   <h1>Sua Lista</h1>
                   <div className="lista">
                     <h2>Sua lista está vazia!</h2>

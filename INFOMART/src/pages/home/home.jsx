@@ -1,18 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-//import Routes from './routes'
-//import { Link } from 'react-router-dom'
-//import api from './Servidor/...'
-//import { BrowserRouter as Router } from 'react-router-dom';
-//import Home from './pages/home';
-//import Minhalista from './pages/minhalista';
-//import api from './Servidor/...'
+import React, { useEffect, useState } from 'react';
+import "./home.css";
 
-function App() {
-    
+
+export default function Root() {
     const [btnState, setBtnState] = useState(false)
     function abrirModal() {
         setBtnState(btnState => !btnState)
@@ -24,16 +14,7 @@ function App() {
     
     let toggleClassNoCheck = btnState ? ' ': ""
     let toggleClassCheck = btnState ? ' active': ""
-
-  return (
-    
-        <section>
-        
-        {/* Início do Menu */}
-        
-                {/* Fim do Menu */}
-
-                {/* Início da Introdução */}
+    return (
         <main>
             <div className='container'>
                 <div className='nav'>
@@ -225,40 +206,15 @@ function App() {
                                 <div className="button-modal">
                                     <button type="submit">+ Adicionar à lista</button>
                                 </div>
+                                    
                                 
-                               
                             </form>
-                            
+                                
                         </div>
-                        
+                            
                     </div>
                 </section> 
             </div>
         </main>  
-        
-        {/* </div> */}
-    </section>
     )
 }
-
-
-
-
-// function abrirModal(event) {
-//     event.preventDefault()
-//     console.log(event)
-// }
-
-// function fecharModal() {
-
-// }
-
-
-
-
-
-// botaoAbrir.addEventListener('click', abrirModal)
-
-// botaoFechar.addEventListener('click', fecharModal)
-
-export default App
