@@ -39,14 +39,14 @@
   }
   
   .container {
-      display: flex;
       margin: 0 auto;
+      display: flex;
       width: 100%;
       justify-content: center;
       flex-direction: column;
       gap: 2.2rem;
-      min-width: 81.125rem;
-      margin-top: 90px;
+      width: 81.125rem;
+      margin-top: 150px;
   }
   
   .container-conteudo {
@@ -59,6 +59,8 @@
       height: 103.438rem;
   }
   
+
+
   /* .navBarContato {
       width: 100%;
       display: flex;
@@ -87,7 +89,7 @@
   .navBar .items, .nav .cart {
       display: flex;
       align-items: center;
-      font-size: 1.3rem;
+      font-size: 1.0rem;
       font-family: 'Mulish', sans-serif;
   }
   
@@ -98,12 +100,12 @@
   li {
     list-style: none;
     color: #262626;
+    font-size: 1.25rem;
   }
   .logo {
       display: flex;
       align-items: center;
       gap: 0.8rem;
-      font-size: 36px;
       font-weight: 700;
   }
   .item {
@@ -115,7 +117,6 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 90px;
-    font-size: 24px;
     font-weight: 700;
   }
   input {
@@ -132,7 +133,6 @@
       display: flex;
       gap: 0.8rem;
       align-items: center;   
-      font-size: 24px;
       font-weight: 700;
   }
   
@@ -153,7 +153,7 @@
       width: 84.5rem;
   }
   .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 4.56rem;
     font-weight: 700;
     width: 40.25rem;
@@ -531,11 +531,17 @@
       display: none;
   }
   
+
+   [data-menu="button"] {
+        display: none;
+   }
+
   
   /* Responsividade */
   
   @media (max-width:600px) {
       .container {
+          margin-top: 180px;
           display: flex;
           width: 100%;
           justify-content: center;
@@ -545,7 +551,7 @@
       }
   
       .container-conteudo {
-          padding-top: 101px;
+          padding-top: 115px;
           display: flex;
           margin: 0 auto;
           width: 20.35rem;
@@ -560,9 +566,9 @@
           justify-content: center;
           margin-bottom: 1.5rem;
       }
+
       .navBar {
           display: flex;
-          gap: 0.7rem;
           background-color: #ffecc6;
           width: 20.35rem;
           padding: 0.7rem 1rem;
@@ -570,13 +576,71 @@
           justify-content: space-between;
           align-items: center;
       }
-      /* h4 {
-          font-size: 12px;
-          font-weight: 400;
-          color: #F6F6EF;
-          margin-block-end: auto;
-          margin-block-start: auto;
-      } */
+
+      .items {
+        gap: 12px;
+      }
+
+      .cart {
+        justify-content: center;
+        gap: 0px;
+      }
+
+        /* Início do Menu hamburguer */
+
+       [data-menu="button"] {
+            display: flex;
+            align-items: center;
+            background: #ffecc6;
+            border: none;
+            padding: .4rem 1rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 300;
+            height: 50px;
+            padding: 0px
+       }
+       [data-menu="button"]::before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 30px;
+            background: #FF5A11;
+            box-shadow: 0 10px #FF5A11, 0 -10px #FF5A11;
+       }
+
+       [data-menu="button"].activeBurger::before {
+            transform: rotate(90deg);
+       }
+
+       .item {
+            display: none;
+            position: absolute;
+            background: #ffecc6;
+            z-index: 200;
+            top: 0;
+            width: 100px;
+            padding: 70px 10px 20px 10px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
+            font-size: 1rem;
+       }
+
+        ul#menu.item.activeBurger {
+            width: 125px;
+            
+        }
+
+        .item.activeBurger {
+            display: block;
+        }
+
+
+       .item li {
+            padding: 9px 0px 9px 0px;
+       }
+
+        /* Fim do Menu hamburguer */
+
       .logo a {
           font-size: 0.9375rem;
       }
@@ -586,6 +650,7 @@
       .noActive {
           display: block;
       }
+
       .cart a {
           font-size: 0.75rem;
       }
@@ -641,8 +706,8 @@
           width: auto;
       }
   
-      .frame h3, .carousel h3  {
-          width: 293px;
+      .frame h3, .destaques h3 {
+          width: 200px;
           text-align: center;
           font-weight: 700;
           line-height: 1.76rem;
@@ -678,14 +743,12 @@
       }
       footer {
           display: flex;
-          margin: 0 auto;
+          margin: 0 auto 50px auto;
           width: 20.35rem;
           justify-content: center;
-          
+          bottom: 0px;
       }
-  
-  
-  
+
       /* Modal */
           .modal-container {
           height: 100vh;

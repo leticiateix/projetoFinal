@@ -224,13 +224,65 @@ main {
         justify-content: space-between;
         align-items: center;
     }
-    /* h4 {
-        font-size: 12px;
-        font-weight: 400;
-        color: #F6F6EF;
-        margin-block-end: auto;
-        margin-block-start: auto;
-    } */
+
+    .items {
+        gap: 12px;
+      }
+
+      .cart {
+        justify-content: center;
+        gap: 0px;
+      }
+
+        /* Início do Menu hamburguer */
+
+       [data-menu="button"] {
+            display: flex;
+            align-items: center;
+            background: #ffecc6;
+            border: none;
+            padding: .4rem 1rem;
+            cursor: pointer;
+            position: relative;
+            z-index: 300;
+            height: 50px;
+            padding: 0px
+       }
+       [data-menu="button"]::before {
+            content: "";
+            display: inline-block;
+            height: 2px;
+            width: 30px;
+            background: #FF5A11;
+            box-shadow: 0 10px #FF5A11, 0 -10px #FF5A11;
+       }
+
+       [data-menu="button"].activeBurger::before {
+            transform: rotate(90deg);
+       }
+
+       .item {
+            display: none;
+            position: absolute;
+            background: #ffecc6;
+            width: 160px;
+            z-index: 200;
+            top: 0;
+            padding: 70px 10px 20px 10px;
+            box-shadow: 2px 2px 2px 0 rgba(0,0,0,.2);
+       }
+
+        .item.activeBurger {
+            display: block;
+        }
+
+       .item li {
+            padding: 9px 5px 9px 5px;
+       }
+
+       /* Fim do hamburguer */
+
+
     .logo a {
         font-size: 0.9375rem;
     }

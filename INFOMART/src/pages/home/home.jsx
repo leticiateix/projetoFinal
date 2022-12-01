@@ -4,9 +4,10 @@ import {Link} from 'react-router-dom'
 
 export default function Root() {
     const [btnState, setBtnState] = useState(false)
+    const [btnBurger, setBtnBurger] = useState(false)
+
     function abrirModal() {
         setBtnState(btnState => !btnState)
-        console.log('clicou')
     }
     function fecharModal() {
         setBtnState(btnState => !btnState)
@@ -14,6 +15,17 @@ export default function Root() {
     
     let toggleClassNoCheck = btnState ? ' ': ""
     let toggleClassCheck = btnState ? ' active': ""
+
+    function ativaBurger() {
+        setBtnBurger(btnBurger=> !btnBurger)
+    }
+    function fecharBurger() {
+        setBtnBurger(btnBurger => !btnBurger)
+    }
+
+    let activeBurger = btnBurger ? ' ': ""
+    let noActiveBurger = btnBurger ? ' activeBurger': ""
+
     return (
         <main>
             <div className='container'>
@@ -28,7 +40,9 @@ export default function Root() {
                             <Link to={'/'}>InfoLists</Link>
                         </div>
                         <nav className="items">
-                            <ul className="item">
+                        {/* Menu */}
+                            <button data-menu="button" onClick={ativaBurger} aria-expanded="false" aria-controls='menu'></button>
+                            <ul data-menu="list" id="menu"  className={`item ${activeBurger} ${noActiveBurger}`} data-modal="container">
                                 <li>
                                     <Link to={'/'}>Meus Favoritos</Link>
                                 </li>
@@ -36,11 +50,11 @@ export default function Root() {
                                     <Link to={'/'}>Categorias</Link>
                                 </li>
                             </ul>
-                            <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
                             <ul className="cart">
                                 <img src="./Cart.svg" alt="" />
                                 <li>
-                                    <Link to={'minhalista'}>Minha Lista</Link>
+                                    <Link to={'minhalista'}>Sua Lista</Link>
                                 </li>
                             </ul>
                         </nav>
@@ -135,9 +149,7 @@ export default function Root() {
                                     <img  data-modal="abrir"  className='ativo'  src="./add.svg" alt="" />
                                     <img  data-modal="abrir" className="noActive" src="./add-1.svg" alt="" />
                                 </div>
-                                <div>
-                                    <p>Crie seu item</p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -180,9 +192,10 @@ export default function Root() {
                             </div>
                         </div>
                     </div>
+                    <footer>InfoMart © Todos os direitos reservados.</footer>   
                 </div>
 
-                <footer>InfoMart © Todos os direitos reservados.</footer>     
+                  
                 <section className={`modal-container btn${toggleClassCheck}  btn${toggleClassNoCheck} `} data-modal="container">
                     <div className='modal'>
                         <button onClick={fecharModal} className='fechar' data-modal="fechar">X</button>

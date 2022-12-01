@@ -3,6 +3,18 @@ import "./minhalista.css";
 import {Link} from 'react-router-dom'
 
 export default function Minhalista() {
+    const [btnBurger, setBtnBurger] = useState(false)
+
+    function ativaBurger() {
+        setBtnBurger(btnBurger=> !btnBurger)
+    }
+    function fecharBurger() {
+        setBtnBurger(btnBurger => !btnBurger)
+    }
+
+    let activeBurger = btnBurger ? ' ': ""
+    let noActiveBurger = btnBurger ? ' activeBurger': ""
+
     return (
         <section>
         
@@ -24,7 +36,9 @@ export default function Minhalista() {
                             <Link to={'/'}>InfoLists</Link>
                         </div>
                         <nav className="items">
-                            <ul className="items">
+                            {/* Menu */}
+                            <button data-menu="button" onClick={ativaBurger} aria-expanded="false" aria-controls='menu'></button>
+                            <ul data-menu="list" id="menu"  className={`item ${activeBurger} ${noActiveBurger}`} data-modal="container">
                                 <li>
                                     <Link to={'/'}>Meus Favoritos</Link>
                                 </li>
@@ -32,11 +46,11 @@ export default function Minhalista() {
                                     <Link to={'/'}>Categorias</Link>
                                 </li>
                             </ul>
-                            <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
                             <ul className="cart">
                                 <img src="./Cart.svg" alt="" />
                                 <li>
-                                    <Link to={'/'}>Sua Lista</Link>
+                                    <Link to={'minhalista'}>Sua Lista</Link>
                                 </li>
                             </ul>
                         </nav>
