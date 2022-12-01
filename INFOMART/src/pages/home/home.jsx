@@ -1,18 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-//import Routes from './routes'
-//import { Link } from 'react-router-dom'
-//import api from './Servidor/...'
-//import { BrowserRouter as Router } from 'react-router-dom';
-//import Home from './pages/home';
-//import Minhalista from './pages/minhalista';
-//import api from './Servidor/...'
+import React, { useEffect, useState } from 'react';
+import "./home.css";
+import {Link} from 'react-router-dom'
 
-function App() {
-    
+export default function Root() {
     const [btnState, setBtnState] = useState(false)
     function abrirModal() {
         setBtnState(btnState => !btnState)
@@ -24,16 +14,7 @@ function App() {
     
     let toggleClassNoCheck = btnState ? ' ': ""
     let toggleClassCheck = btnState ? ' active': ""
-
-  return (
-    
-        <section>
-        
-        {/* Início do Menu */}
-        
-                {/* Fim do Menu */}
-
-                {/* Início da Introdução */}
+    return (
         <main>
             <div className='container'>
                 <div className='nav'>
@@ -44,20 +25,25 @@ function App() {
                     <div className="navBar">
                         <div className="logo">
                             <img src="./logo.svg" alt="sacolas de laranja e amarela" />
-                            <a href="#">InfoLists</a>
+                            <Link to={'/'}>InfoLists</Link>
                         </div>
-                        <div className="items">
-                            <a className="ativo" href="#">Meus Favoritos</a>
-                            <a className="ativo" href="#">Categorias</a>    
-                        </div>
-                        <div>
-                            <a className="noActive" href=""><img src="./Burger.svg" alt="" /></a>
-                        </div>
-                        <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
-                        <div className="cart">
-                            <img src="./Cart.svg" alt="" />
-                            <a href="#">Minha Lista</a>
-                        </div>
+                        <nav className="items">
+                            <ul className="item">
+                                <li>
+                                    <Link to={'/'}>Meus Favoritos</Link>
+                                </li>
+                                <li>
+                                    <Link to={'/'}>Categorias</Link>
+                                </li>
+                            </ul>
+                            <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <ul className="cart">
+                                <img src="./Cart.svg" alt="" />
+                                <li>
+                                    <Link to={'minhalista'}>Minha Lista</Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div className='container-conteudo'>
@@ -225,40 +211,16 @@ function App() {
                                 <div className="button-modal">
                                     <button type="submit">+ Adicionar à lista</button>
                                 </div>
+                                    
                                 
-                               
                             </form>
-                            
+                                
                         </div>
-                        
+                            
                     </div>
                 </section> 
             </div>
+
         </main>  
-        
-        {/* </div> */}
-    </section>
     )
 }
-
-
-
-
-// function abrirModal(event) {
-//     event.preventDefault()
-//     console.log(event)
-// }
-
-// function fecharModal() {
-
-// }
-
-
-
-
-
-// botaoAbrir.addEventListener('click', abrirModal)
-
-// botaoFechar.addEventListener('click', fecharModal)
-
-export default App

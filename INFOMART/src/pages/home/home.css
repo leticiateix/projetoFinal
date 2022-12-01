@@ -1,17 +1,10 @@
 :root {
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-  
+
     color: #262626;
     background-color: #F6F6EF;
   
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
   }
-  
+
   * {
       margin: 0px;
       padding: 0px;
@@ -36,7 +29,7 @@
   .navBar {
       padding: 0.7rem 1rem;
       display: flex;
-      gap: 20px;
+      gap: 4rem;
       justify-content: space-between;
       align-items: center;
   }
@@ -59,10 +52,11 @@
   .container-conteudo {
       display: flex;
       margin: 0 auto;
-      width: 81.125rem;
+      /*width: 81.125rem;*/
       justify-content: center;
       flex-direction: column;
       gap: 2.2rem;
+      height: 103.438rem;
   }
   
   /* .navBarContato {
@@ -92,15 +86,17 @@
   
   .navBar .items, .nav .cart {
       display: flex;
+      align-items: center;
       font-size: 1.3rem;
       font-family: 'Mulish', sans-serif;
   }
   
-  
-  
-  
   a {
     text-decoration: none;
+    color: #262626;
+  }
+  li {
+    list-style: none;
     color: #262626;
   }
   .logo {
@@ -110,10 +106,15 @@
       font-size: 36px;
       font-weight: 700;
   }
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
   .items {
     flex-direction: row;
     align-items: flex-start;
-    gap: 32px;
+    gap: 90px;
     font-size: 24px;
     font-weight: 700;
   }
@@ -149,8 +150,9 @@
   .hero {
       display: flex;
       justify-content: space-between;
+      width: 84.5rem;
   }
-  h1 {
+  .hero h1 {
     font-size: 4rem;
     line-height: 4.56rem;
     font-weight: 700;
@@ -158,7 +160,7 @@
     margin-block-end: auto;
     margin-block-start: auto;
   }
-  p {
+  .hero p {
     font-size: 1.5rem;
     line-height: 1.688rem;
     font-weight: 700;
@@ -172,7 +174,7 @@
     background-color: #F5CB7A;
     grid-template-columns: 1fr 1fr;
     padding: 0.9rem 1rem;
-    gap: 4rem;
+    gap: 2rem;
     border-radius: 10px;
   }
   
@@ -205,19 +207,31 @@
       cursor: pointer;
   }
   
-  h3 {
+  .carousel h3 {
+    font-family: 'Domine';
+    font-style: normal;
     font-size: 2.1rem;
     line-height: 2.813rem;
     font-weight: 700;
     margin-block-end: auto;
     margin-block-start: auto;
+    color: #262626;
+  }
+  .frame h3 {
+    font-family: 'Domine';
+    font-style: normal;
+    font-size: 2.1rem;
+    line-height: 2.813rem;
+    font-weight: 700;
+    margin-block-end: auto;
+    margin-block-start: auto;
+    color: #262626;
   }
   
   .carousel {
       display: flex;
       flex-direction: column;
-      width: 40.625;
-      height: 21.688;
+      width: 40.625rem;
       overflow-x: scroll;
       padding: 0;
       gap: 0.9rem;
@@ -228,6 +242,7 @@
       flex-direction: column;
       align-items: center;
       gap:4.5rem;
+      width: 39.625rem;
   }
   
   .img-carousel {
@@ -236,7 +251,7 @@
     gap: 0.938rem;
   }
   
-  .img-caurosel img {
+  .img-carousel img {
     width: 15,313rem;
     height: 13rem;
     border-radius: 0.625rem;
@@ -316,7 +331,7 @@
   .categorias {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1.25rem;
   }
   
   .one {
@@ -327,6 +342,7 @@
     background-color: #DEDEDE;
     border-radius: 5px;
     height: 41.313rem;
+    width: 20.125rem;
   }
   .one img {
     border-radius: 5px 5px 0px 0px;
@@ -338,6 +354,8 @@
     font-size: 36px; 
     margin-block-end: 0;
     margin-block-start: 0;
+    color: #262626;
+    width: 136px;
   }
   #botao2 {
     background-color: #FF5A11;
@@ -527,7 +545,7 @@
       }
   
       .container-conteudo {
-          margin-top: 80px;
+          padding-top: 101px;
           display: flex;
           margin: 0 auto;
           width: 20.35rem;
@@ -575,8 +593,9 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          width: auto;
       }
-      h1 {
+      .hero h1 {
           font-size: 1.8rem;
           font-weight: 700;
           line-height: 2rem;
@@ -584,14 +603,12 @@
           text-align: center;
           padding: 10px;
       }
-      p {
-          width: 19.125rem;
-        }
       .hero p {
           font-size: 0.75rem;
           text-align: center;
           line-height: 0.85rem;
           padding: 10px;
+          width: 19.125rem;
       }
       .addItem-container, .addItem {
           width: 293px;
@@ -609,12 +626,19 @@
           border-radius: 10px;
           
       }
+      .carousel {
+        width: auto;
+        overflow-x: scroll;
+        padding: 0;
+        gap: 0.9rem;
+      }
       .frame {
           display: flex;
           justify-content: center;
           margin: 0 auto;
           align-items: center;
           gap:2rem;
+          width: auto;
       }
   
       .frame h3, .carousel h3  {
