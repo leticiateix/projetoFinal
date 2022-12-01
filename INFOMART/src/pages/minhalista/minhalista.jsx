@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./minhalista.css";
-
+import {Link} from 'react-router-dom'
 
 export default function Minhalista() {
     return (
@@ -20,21 +20,26 @@ export default function Minhalista() {
                             </div> */}
                     <div className="navBar">
                         <div className="logo">
-                            <img src="./logo.svg" alt="logo" />
-                            <a href="#">InfoLists</a>
+                            <img src="./logo.svg" alt="sacolas de laranja e amarela" />
+                            <Link to={'/'}>InfoLists</Link>
                         </div>
-                        <div className="items">
-                            <a className="ativo" href="#">Meus Favoritos</a>
-                            <a className="ativo" href="#">Categorias</a>    
-                        </div>
-                        <div>
-                            <a className="noActive" href=""><img src="./Burger.svg" alt="" /></a>
-                        </div>
-                        <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
-                        <div className="cart">
-                            <img src="./Cart.svg" alt="" />
-                            <a href="#">Sua Lista</a>
-                        </div>
+                        <nav className="items">
+                            <ul className="items">
+                                <li>
+                                    <Link to={'/'}>Meus Favoritos</Link>
+                                </li>
+                                <li>
+                                    <Link to={'/'}>Categorias</Link>
+                                </li>
+                            </ul>
+                            <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <ul className="cart">
+                                <img src="./Cart.svg" alt="" />
+                                <li>
+                                    <Link to={'/'}>Sua Lista</Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div className='container-cont'>

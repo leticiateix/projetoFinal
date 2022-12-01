@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./home.css";
-
+import {Link} from 'react-router-dom'
 
 export default function Root() {
     const [btnState, setBtnState] = useState(false)
@@ -25,20 +25,25 @@ export default function Root() {
                     <div className="navBar">
                         <div className="logo">
                             <img src="./logo.svg" alt="sacolas de laranja e amarela" />
-                            <a href="#">InfoLists</a>
+                            <Link to={'/'}>InfoLists</Link>
                         </div>
-                        <div className="items">
-                            <a className="ativo" href="#">Meus Favoritos</a>
-                            <a className="ativo" href="#">Categorias</a>    
-                        </div>
-                        <div>
-                            <a className="noActive" href=""><img src="./Burger.svg" alt="" /></a>
-                        </div>
-                        <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
-                        <div className="cart">
-                            <img src="./Cart.svg" alt="" />
-                            <a href="#">Minha Lista</a>
-                        </div>
+                        <nav className="items">
+                            <ul className="item">
+                                <li>
+                                    <Link to={'/'}>Meus Favoritos</Link>
+                                </li>
+                                <li>
+                                    <Link to={'/'}>Categorias</Link>
+                                </li>
+                            </ul>
+                            <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <ul className="cart">
+                                <img src="./Cart.svg" alt="" />
+                                <li>
+                                    <Link to={'minhalista'}>Minha Lista</Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div className='container-conteudo'>
@@ -215,6 +220,7 @@ export default function Root() {
                     </div>
                 </section> 
             </div>
+
         </main>  
     )
 }

@@ -86,15 +86,17 @@
   
   .navBar .items, .nav .cart {
       display: flex;
+      align-items: center;
       font-size: 1.3rem;
       font-family: 'Mulish', sans-serif;
   }
   
-  
-  
-  
   a {
     text-decoration: none;
+    color: #262626;
+  }
+  li {
+    list-style: none;
     color: #262626;
   }
   .logo {
@@ -104,10 +106,15 @@
       font-size: 36px;
       font-weight: 700;
   }
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
   .items {
     flex-direction: row;
     align-items: flex-start;
-    gap: 32px;
+    gap: 90px;
     font-size: 24px;
     font-weight: 700;
   }
