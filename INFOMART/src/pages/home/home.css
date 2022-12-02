@@ -53,7 +53,6 @@
   .container-conteudo {
       display: flex;
       margin: 0 auto;
-      /*width: 81.125rem;*/
       justify-content: center;
       flex-direction: column;
       gap: 2.2rem;
@@ -167,7 +166,7 @@
     font-weight: 700;
     margin-block-end: auto;
     margin-block-start: auto;
-    width: 43.563rem;
+    width: 37.563rem;
   }
   
   .destaques {
@@ -233,8 +232,6 @@
       display: flex;
       flex-direction: column;
       width: 40.625rem;
-      overflow-x: scroll;
-      padding: 0;
       gap: 0.9rem;
   }
   
@@ -250,6 +247,8 @@
     display: flex;
     flex-direction: row;
     gap: 0.938rem;
+    overflow-x: scroll;
+    padding: 0;
   }
   
   .img-carousel img {
@@ -481,10 +480,204 @@
 
   
   /* Responsividade */
-  
+  @media (max-width: 800px) {
+    .container {
+      margin: 0 auto;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2.2rem;
+      width: 81.125rem;
+      margin-top: 150px;
+  }
+
+  .container-conteudo {
+      height: auto;
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      width: 42rem;
+      text-align: center;
+  }
+
+    .promotions {
+      width: 42rem;
+    }
+
+    .destaques {
+      display: grid;
+      background-color: #F5CB7A;
+      grid-template-columns: auto;
+      padding: 0.9rem 1rem;
+      gap: 2rem;
+      border-radius: 10px;
+      max-width: 42rem;
+      width: 100%;
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns:  1fr 1fr;
+      gap: 1.375rem;
+    }
+
+
+    .items {
+      gap: 12px;
+    }
+
+    .cart {
+      justify-content: center;
+      gap: 0px;
+    }
+
+    .logo a {
+        font-size: 0.9375rem;
+    }
+    .ativo {
+        display: none;
+    }
+    .noActive {
+        display: block;
+    }
+
+    .cart a {
+        font-size: 0.75rem;
+    }
+
+    .addItem-container, .addItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #DEDEDE;
+      width: 495px;
+      height: 217px;
+      margin: 0 auto;
+      padding: 2rem;
+  }
+
+    .carousel {
+      width: auto;
+      overflow-x: scroll;
+      padding: 0;
+      gap: 0.9rem;
+    }
+    .frame {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        gap:2rem;
+        width: auto;
+    }
+
+    .categorias {
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        gap: 1.375rem;
+    }
+
+    .botao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 7.75rem;
+        height: 1.625rem;
+    }
+    .promotions h2 {
+        font-size: 1.4rem;
+        padding: 10px;
+        text-align: center;
+    }
+    h3#name {
+        font-family: 'Mulish';
+        font-size: 1.5rem; 
+    }
+    footer {
+        display: flex;
+        margin: 0 auto 50px auto;
+        width: 20.35rem;
+        justify-content: center;
+        bottom: 0px;
+    }
+
+    /* Modal */
+        .modal-container {
+        height: 100vh;
+        min-width: 20.35rem;
+    }
+
+    .modal {
+        width: 327px;
+    }
+
+
+    .addItemModal p {
+        font-size: 0.9rem;
+        font-family: 'Domine', serif
+    }
+
+
+    .forms input {
+        width: 108px;
+        height: 35px;
+        padding: 0px;
+        border: none;
+        padding-left: 5px;
+        font-size: 0.5rem;
+        color: #9E9E9E;
+        font-family: 'Mulish';
+    }
+
+    .input-modal {
+        display: flex;
+        flex-direction: column;
+        color:#262626;
+        font-family: 'Mulish';
+        font-size: 0.75rem;
+    }
+
+    .button-modal {
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+        align-items: flex-end;
+    }
+
+    .button-modal button {
+        width: 108px;
+        height: 39px;
+        border-radius: 10px;
+        border: none;
+        background: #FF5A11;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 0.7rem;
+    }
+
+    .forms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 24px;
+    }
+}
+
   @media (max-width:600px) {
       .container {
-          margin-top: 180px;
+          margin-top: 100px;
           display: flex;
           width: 100%;
           justify-content: center;
@@ -494,7 +687,6 @@
       }
   
       .container-conteudo {
-          padding-top: 115px;
           display: flex;
           margin: 0 auto;
           width: 20.35rem;
@@ -625,6 +817,10 @@
           padding: 0px;
       }
   
+      .promotions {
+        width: auto;
+      }
+
       .destaques {
           display: grid;
           background-color: #F5CB7A;
