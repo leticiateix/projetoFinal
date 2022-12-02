@@ -50,7 +50,7 @@ export default function Minhalista() {
                             <ul className="cart">
                                 <img src="./Cart.svg" alt="" />
                                 <li>
-                                    <Link to={'minhalista'}>Sua Lista</Link>
+                                    <Link to={'/'}>Sua Lista</Link>
                                 </li>
                             </ul>
                         </nav>

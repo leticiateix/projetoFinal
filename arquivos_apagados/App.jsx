@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import "./home.css";
-import {Link} from 'react-router-dom'
-import Cards from '../components/post/cards'
+import React from 'react';
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import './App.css'
+//import Routes from './routes'
+//import { Link } from 'react-router-dom'
+//import api from './Servidor/...'
+//import { BrowserRouter as Router } from 'react-router-dom';
+//import Home from './pages/home';
+//import Minhalista from './pages/minhalista';
+//import api from './Servidor/...'
 
-export default function Root() {
+function App() {
+    
     const [btnState, setBtnState] = useState(false)
-    const [btnBurger, setBtnBurger] = useState(false)
-
     function abrirModal() {
         setBtnState(btnState => !btnState)
+        console.log('clicou')
     }
     function fecharModal() {
         setBtnState(btnState => !btnState)
@@ -17,17 +25,15 @@ export default function Root() {
     let toggleClassNoCheck = btnState ? ' ': ""
     let toggleClassCheck = btnState ? ' active': ""
 
-    function ativaBurger() {
-        setBtnBurger(btnBurger=> !btnBurger)
-    }
-    function fecharBurger() {
-        setBtnBurger(btnBurger => !btnBurger)
-    }
+  return (
+    
+        <section>
+        
+        {/* Início do Menu */}
+        
+                {/* Fim do Menu */}
 
-    let activeBurger = btnBurger ? ' ': ""
-    let noActiveBurger = btnBurger ? ' activeBurger': ""
-
-    return (
+                {/* Início da Introdução */}
         <main>
             <div className='container'>
                 <div className='nav'>
@@ -38,27 +44,20 @@ export default function Root() {
                     <div className="navBar">
                         <div className="logo">
                             <img src="./logo.svg" alt="sacolas de laranja e amarela" />
-                            <Link to={'/'}>InfoLists</Link>
+                            <a href="#">InfoLists</a>
                         </div>
-                        <nav className="items">
-                        {/* Menu */}
-                            <button data-menu="button" onClick={ativaBurger} aria-expanded="false" aria-controls='menu'></button>
-                            <ul data-menu="list" id="menu"  className={`item ${activeBurger} ${noActiveBurger}`} data-modal="container">
-                                <li>
-                                    <Link to={'/'}>Meus Favoritos</Link>
-                                </li>
-                                <li>
-                                    <Link to={'/'}>Categorias</Link>
-                                </li>
-                            </ul>
-                            <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
-                            <ul className="cart">
-                                <img src="./Cart.svg" alt="" />
-                                <li>
-                                    <Link to={'minhalista'}>Minha Lista</Link>
-                                </li>
-                            </ul>
-                        </nav>
+                        <div className="items">
+                            <a className="ativo" href="#">Meus Favoritos</a>
+                            <a className="ativo" href="#">Categorias</a>    
+                        </div>
+                        <div>
+                            <a className="noActive" href=""><img src="./Burger.svg" alt="" /></a>
+                        </div>
+                        <input className="ativo" type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                        <div className="cart">
+                            <img src="./Cart.svg" alt="" />
+                            <a href="#">Minha Lista</a>
+                        </div>
                     </div>
                 </div>
                 <div className='container-conteudo'>
@@ -75,12 +74,72 @@ export default function Root() {
                         <div className='carousel'>
                             <h3>Algumas sugestões</h3>
                             <div className="img-carousel">
-                                <Cards />
-                                <Cards />
-                                <Cards />
-                                <Cards />
-                                <Cards />
-                                <Cards />
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
+                                <div className="content" id="content">
+                                    <img src="./caqui.svg" alt="" />
+                                    <div className="categoria">
+                                        <div className="info">
+                                            <h4 id="nome">Caqui</h4>
+                                            <h4 id="preco">R$ 49,99</h4>
+                                        </div>
+                                        <h5>Categoria: Fruta</h5>
+                                    </div>
+                                    <button id='botao1'>+ Lista</button>
+                                </div>
                             </div>
                         </div>
                         <div className='frame'>
@@ -90,7 +149,9 @@ export default function Root() {
                                     <img  data-modal="abrir"  className='ativo'  src="./add.svg" alt="" />
                                     <img  data-modal="abrir" className="noActive" src="./add-1.svg" alt="" />
                                 </div>
-                                
+                                <div>
+                                    <p>Crie seu item</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,10 +194,9 @@ export default function Root() {
                             </div>
                         </div>
                     </div>
-                    <footer>InfoMart © Todos os direitos reservados.</footer>   
                 </div>
 
-                  
+                <footer>InfoMart © Todos os direitos reservados.</footer>     
                 <section className={`modal-container btn${toggleClassCheck}  btn${toggleClassNoCheck} `} data-modal="container">
                     <div className='modal'>
                         <button onClick={fecharModal} className='fechar' data-modal="fechar">X</button>
@@ -165,16 +225,40 @@ export default function Root() {
                                 <div className="button-modal">
                                     <button type="submit">+ Adicionar à lista</button>
                                 </div>
-                                    
                                 
+                               
                             </form>
-                                
-                        </div>
                             
+                        </div>
+                        
                     </div>
                 </section> 
             </div>
-
         </main>  
+        
+        {/* </div> */}
+    </section>
     )
 }
+
+
+
+
+// function abrirModal(event) {
+//     event.preventDefault()
+//     console.log(event)
+// }
+
+// function fecharModal() {
+
+// }
+
+
+
+
+
+// botaoAbrir.addEventListener('click', abrirModal)
+
+// botaoFechar.addEventListener('click', fecharModal)
+
+export default App
