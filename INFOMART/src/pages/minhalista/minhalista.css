@@ -35,7 +35,9 @@
 }
 
 .navBar input {
-    width: 415px;
+  width: 415px;
+  padding: 10px;
+  border-radius: 36px;
 }
 
 .container2 {
@@ -50,13 +52,16 @@
 }
 
 .container-cont {
-    display: flex;
-    margin: 0 auto;
-    width: 81.125rem;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2.2rem;
+  display: flex;
+  margin: 0 auto;
+  max-width: 81.125rem;
+  width: 80%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.2rem;
 }
+
 
 /* .navBarContato {
     width: 100%;
@@ -119,16 +124,8 @@ main {
 
 div.lista {
     margin: 0 auto;
-    width: 1298px;
+    width: 100%;
 }
-
- .container-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    align-items: flex-start;
-  }
   
   .container-cont h1 {
     font-family: 'Domine';
@@ -145,7 +142,7 @@ div.lista {
     justify-content: center;
     align-items: center;
     gap: 41px;
-    width: 84.25rem;
+    width: 100%;
     height: 25.375rem;
     background: #F5CB7A;
   }
@@ -318,6 +315,7 @@ div.lista {
       font-size: 12px;
       line-height: 15px;
       width: 18.313rem;
+      text-align: center;
     }
     #home {
         width: 4.68rem;
@@ -325,6 +323,8 @@ div.lista {
 
         font-size: 15px;
         line-height: 19px;
-
+    }
+    div.lista {
+      width: 20.313rem;
     }
   }
