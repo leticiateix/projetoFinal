@@ -1,9 +1,7 @@
-// tabela está jdbc:mysql://sql10.freesqldatabase.com:3306/sql10582412
-
 const express = require("express")
 
 const PORT = 3333
-
+ 
 // Fake databases
 
 let lista = []
