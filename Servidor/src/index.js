@@ -35,8 +35,8 @@ app.use(express.json()) // Aplicar MIDDLEWARES
 // Adicionar os itens
 
 app.post('/lista', (req, res) => {
-    const {nome, preco, categoria} = req.body;
-    const item = {nome, preco, categoria};
+    const {nome, categoria, preco, img} = req.body;
+    const item = {nome, categoria, preco, img};
     lista.push(item);
     return res.status(201).json(item);
 })
@@ -70,12 +70,13 @@ app.delete("/lista/:item_nome", (req, res) => {
 // Para alterar algum dado de dentro da base
 
 app.patch('/lista/:item_nome', (req, res) => {
-    const {nome, categoria, preco} = req.body;
+    const {nome, categoria, preco, img} = req.body;
     const {item_nome} = req.params;
     const item = lista.find((item) => item.nome === item_nome);
     item.nome = item.nome;
     item.categoria = categoria ? categoria : lista.categoria;
     item.preco = preco ? preco : lista.preco;
+    item.img = img ? img : lista.preco;
     return res.status(200).json(item);
 })
 
