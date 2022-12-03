@@ -843,8 +843,8 @@
 
       .carousel {
         width: auto;
-        overflow-x: scroll;
-        padding: 0;
+        /*overflow-x: scroll;
+        padding: 0;*/
         gap: 0.9rem;
       }
       .frame {
@@ -857,7 +857,7 @@
       }
   
       .frame h3, .destaques h3 {
-          width: 200px;
+          /*width: 200px;*/
           text-align: center;
           font-weight: 700;
           line-height: 1.76rem;
