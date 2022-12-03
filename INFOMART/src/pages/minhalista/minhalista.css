@@ -34,11 +34,11 @@
     align-items: center;
 }
 
-.navBar input {
+/* .navBar input {
   width: 415px;
   padding: 10px;
   border-radius: 36px;
-}
+} */
 
 .container2 {
     display: flex;
@@ -93,7 +93,7 @@
     font-family: 'Mulish', sans-serif;
 }
 
-input {
+/* input {
   text-align: left;
   font-weight: 400;
   height: 2.25rem;
@@ -102,7 +102,7 @@ input {
   border: none;
   background: #F1F5F9;
   padding: 0.5em;
-}
+} */
 .cart {
     display: flex;
     gap: 0.8rem;
