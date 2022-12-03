@@ -64,7 +64,7 @@ export default function Minhalista() {
                   <div className="lista">
                     <h2>Sua lista está vazia!</h2>
                     <h3>Para inserir produtos basta clicar no botão "+Lista" debaixo dos itens!</h3>
-                    <button id='home'>Home</button>
+                    <Link to={'/'} id='home'>Home</Link>
                   </div>
                 </div>
             </div>
