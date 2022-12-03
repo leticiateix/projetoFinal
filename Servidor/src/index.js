@@ -1,4 +1,16 @@
-// tabela está jdbc:mysql://sql10.freesqldatabase.com:3306/sql10582412
+const mysql = require('mysql2')
+ 
+const connection = mysql.createConnection({
+    host:'sql10.freesqldatabase.com',
+    user:'sql10582412',
+    password:'aymItsf1KC',
+    database:'sql10582412'
+})
+ 
+connection.query('SELECT NOW()', function(error, result){
+    if(error) throw error
+    console.log(result)
+})
 
 const express = require("express")
 
