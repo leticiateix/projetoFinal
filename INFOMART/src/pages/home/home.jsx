@@ -51,7 +51,10 @@ export default function Root() {
                                     <Link to={'/'}>Categorias</Link>
                                 </li>
                             </ul>
-                            <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <div className='nav-input ativo'>
+                                <input type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                                <img src="./lupa.svg" alt="" />
+                            </div>
                             <ul className="cart">
                                 <img src="./Cart.svg" alt="" />
                                 <li>
@@ -90,16 +93,15 @@ export default function Root() {
                                     <img  data-modal="abrir"  className='ativo'  src="./add.svg" alt="" />
                                     <img  data-modal="abrir" className="noActive" src="./add-1.svg" alt="" />
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
                     <div>
                         <div className="promotions">
-                            <h2>Categorias</h2>
+                            <h2 className='titulo-categoria'>Categorias</h2>
                             <div className="categorias">
                                 <div className="one">
-                                    <img className="ativo" src="./padaria.svg" alt="" />
+                                    <img className="ativo" src="./padaria.svg" width={300} alt="" />
                                     <img className="noActive" src="./donuts.svg" alt="" />
                                     <h3 id='name'>Padaria</h3>
                                     <div className="botao">
@@ -107,7 +109,7 @@ export default function Root() {
                                     </div>
                                 </div>
                                 <div className="one">
-                                    <img className="ativo" src="./hortifruti.svg" alt="" />
+                                    <img className="ativo" src="./hortifruti.svg" width={300} alt="" />
                                     <img className="noActive" src="./legumes.svg" alt="" />
                                     <h3 id='name'>Hortifruti</h3>
                                     <div className="botao">
@@ -115,7 +117,7 @@ export default function Root() {
                                     </div>
                                 </div>
                                 <div className="one">
-                                    <img className="ativo" src="./limpeza.svg" alt="" />
+                                    <img className="ativo" src="./limpeza.svg" width={300} alt="" />
                                     <img className="noActive" src="./limpeza-1.svg" alt="" />
                                     <h3 id='name'>Limpeza</h3>
                                     <div className="botao">
@@ -123,7 +125,7 @@ export default function Root() {
                                     </div>
                                 </div>
                                 <div className="one">
-                                    <img className="ativo" src="./higiene.svg" alt="" />
+                                    <img className="ativo" src="./higiene.svg" width={300} alt="" />
                                     <img className="noActive" src="./papel.svg" alt="" />
                                     <h3 id='name'>Higiene</h3>
                                     <div className="botao">
