@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react'
 import './cards.css'
 
-
 function Cards(props) {
     return(
         <div className="content" id="content">
@@ -14,7 +13,7 @@ function Cards(props) {
                 </div>
                 <h5>Categoria: Fruta</h5>
             </div>
-            <button id='botao1'>+ Lista</button>
+            <button id='botao1' /*</div>onClick={add}*/>+ Lista</button>
         </div>
     )
 }
