@@ -55,7 +55,6 @@ export default function Root() {
                                 <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
                                 <img src="./lupa.svg" alt="" />
                             </div>
-                            
                             <ul className="cart">
                                 <img src="./Cart.svg" alt="" />
                                 <li>
@@ -94,7 +93,6 @@ export default function Root() {
                                     <img  data-modal="abrir"  className='ativo'  src="./add.svg" alt="" />
                                     <img  data-modal="abrir" className="noActive" src="./add-1.svg" alt="" />
                                 </div>
-                                
                             </div>
                         </div>
                     </div>
