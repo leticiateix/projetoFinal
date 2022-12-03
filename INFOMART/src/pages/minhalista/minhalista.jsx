@@ -46,8 +46,8 @@ export default function Minhalista() {
                                     <Link to={'/'}>Categorias</Link>
                                 </li>
                             </ul>
-                            <div className='nav-input'>
-                                <input className='ativo' type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
+                            <div className='nav-input ativo'>
+                                <input type="text" name="pesquisa" placeholder="Pesquisar itens"></input>
                                 <img src="./lupa.svg" alt="" />
                             </div>
                             <ul className="cart">

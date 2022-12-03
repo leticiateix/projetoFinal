@@ -481,7 +481,7 @@
 
   
   /* Responsividade */
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
     .container {
       margin: 0 auto;
       display: flex;
@@ -615,7 +615,7 @@
     }
 
     /* Modal */
-        .modal-container {
+        /* .modal-container {
         height: 100vh;
         min-width: 20.35rem;
     }
@@ -674,7 +674,7 @@
         justify-content: center;
         gap: 24px;
     }
-}
+} */
 
   @media (max-width:600px) {
       .container {
@@ -817,20 +817,29 @@
           background: none;
           padding: 0px;
       }
-  
-      .promotions {
-        width: auto;
-      }
+
 
       .destaques {
           display: grid;
+          width: 18.2rem;
           background-color: #F5CB7A;
-          grid-template-columns: 293px;
-          padding: 2rem 1rem;
+          grid-template-columns: 277px;
           gap: 4rem;
           border-radius: 10px;
           
       }
+
+        div.promotions {
+            width: 200px;   
+        }
+
+        div.categorias {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            width: 200px;
+        }
+
       .carousel {
         width: auto;
         overflow-x: scroll;
@@ -855,12 +864,23 @@
       }
       .categorias {
           display: grid;
+          width: 25rem;
+          padding-right: 0px;
           grid-template-columns:  1fr 1fr;
-          gap: 1.375rem;
       }
+
+      h2.titulo-categoria {
+        width: 18.2rem;
+      }
+      
+      .promotions {
+        width: 25rem;
+        padding: 0px;
+      }
+
       .one {
           gap: 1rem;
-          width: 15rem;
+          width: 9.37rem;
           height: 20.5rem;
       }
       .botao {
