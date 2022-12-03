@@ -1,4 +1,5 @@
 const mysql = require('mysql2')
+const nodemon = require('nodemon')
  
 const connection = mysql.createConnection({
     host:'sql10.freesqldatabase.com',
@@ -13,8 +14,6 @@ connection.query('SELECT NOW()', function(error, result){
 })
 
 const express = require("express")
-
-const PORT = 3333
 
 // Fake databases
 
@@ -76,4 +75,7 @@ app.patch('/lista/:item_nome', (req, res) => {
 
 // MANDAR O SERVIDOR RODAR
 
-app.listen(3333, () => console.log('Server is running'))
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, function() {
+    console.log (`API rodando na porta ${PORT}`);
+});
