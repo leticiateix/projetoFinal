@@ -41,7 +41,7 @@
       flex-direction: column;
       gap: 2.2rem;
       min-width: 81.125rem;
-      margin-top: 140px;
+      margin-top: 120px;
   }
    
   .container-conteudo {
@@ -57,7 +57,7 @@
 .nav-input {
     display: flex;
     background: green;
-    width: 400px;
+    max-width: 400px;
     padding: 10px;
     border-radius: 36px;
     gap: 10px;
@@ -69,7 +69,8 @@
 }
 
 .nav-input input {
-    width: 360px;
+    max-width: 360px;
+    min-width: 300px;
     border: none;
     background: #DEDEDE;
     padding: 3px;
