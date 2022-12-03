@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-const express = require("express")
-
-const PORT = 3333
- 
-=======
-const mysql = require('mysql2')
+const mysql = require('mysql2/promise')
 const nodemon = require('nodemon')
+const express = require("express")
+const app = express()
  
 const connection = mysql.createConnection({
     host:'sql10.freesqldatabase.com',
@@ -13,45 +9,90 @@ const connection = mysql.createConnection({
     password:'aymItsf1KC',
     database:'sql10582412'
 }) 
- 
-connection.query('SELECT NOW()', function(error, result){
-    if(error) throw error
-    console.log(result)
-})
 
-const express = require("express")
+module.exports = connection;
 
->>>>>>> 11216f0501623184673b72953c1f494f125cfce3
-// Fake databases
+// connection.query('SELECT NOW()', function(error, result){
+//     if(error) throw error
+//     console.log(result)
+// })
 
 let lista = []
 
 // CRIAR o APP
 
-const app = express()
-
 app.use(express.json()) // Aplicar MIDDLEWARES
 
 // Adicionar os itens
 
-app.post('/lista', (req, res) => {
-    const {nome, categoria, preco, img} = req.body;
-    const item = {nome, categoria, preco, img};
-    lista.push(item);
-    return res.status(201).json(item);
+// app.get("/", function(req, res) {
+//     res.send("olá")
+// })
+
+// app.post('/lista', (req, res) => {
+//     const {nome, categoria, preco, img} = req.body;
+//     const item = {nome, categoria, preco, img};
+//     lista.push(item);
+//     return res.status(201).json(item);
+// })
+
+module.exports = {
+
+}
+app.post('/nome/insert', async (req, res) => {
+    let datas = {
+        "nome": req.body.nome,
+        "categoria": req.body.categoria,
+        "preco": req.body.preco,
+        "img": req.body.img
+    }
+    try {
+        let response = await db.query('INSERT INTO produtos SET ?', [datas])
+        res.json(response)
+    } catch (error) {
+        console.log(error)
+    }
 })
+
+module.exports = {
+    async insert(req, res) {
+    
+    }
+}
+
+// Rever
+
+// module.exports = {
+//     async insert(req, res) {
+//         let datas = {
+//         "nome": req.body.nome,
+//         "categoria": req.body.categoria,
+//         "preco": req.body.preco,
+//         "img": req.body.img
+//     }
+//         try {
+//             let response = await db.query('INSERT INTO produtos SET ?', [datas])
+//             res.json(response)
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+// }
+
+// Fim rever
+
 
 // Mostrar toda a lista de itens
 
 app.get("/lista", (req, res) => {
     const allLista = lista;
-    return res.status(200).json(lista);
+    return res.status(200).json(allLista);
 })
 
 // Encontrar um item da lista
 
 app.get("/lista/:item_nome", (req, res) => {
-    const {item_nome} = req.params;
+    const {item_nome} = req.params.item_nome;
     const item = lista.find((item) => item.nome == item_nome);
     if (!item) res.status(404).json("Item não encontrado");
     return res.status(200).json(item);
@@ -59,7 +100,7 @@ app.get("/lista/:item_nome", (req, res) => {
 
 // Deletar um item da lista
 
-app.delete("/lista/:item_nome", (req, res) => {
+app.delete("/:item_nome", (req, res) => {
     const {item_nome} = req.params;
     const filtrarItens = lista.filter((item) => item.nome !== item_nome);
     lista = filtrarItens;
@@ -69,11 +110,11 @@ app.delete("/lista/:item_nome", (req, res) => {
 
 // Para alterar algum dado de dentro da base
 
-app.patch('/lista/:item_nome', (req, res) => {
+app.patch('/:item_nome', (req, res) => {
     const {nome, categoria, preco, img} = req.body;
     const {item_nome} = req.params;
     const item = lista.find((item) => item.nome === item_nome);
-    item.nome = item.nome;
+    item.nome = nome ? nome : lista.nome
     item.categoria = categoria ? categoria : lista.categoria;
     item.preco = preco ? preco : lista.preco;
     item.img = img ? img : lista.preco;
